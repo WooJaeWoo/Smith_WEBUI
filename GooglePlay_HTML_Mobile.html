@@ -3,149 +3,40 @@
 <head>
 	<title>Google Play 도서</title>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=0.93, maximum-scale=0.93">
 	<link rel="stylesheet" type="text/css" href="GooglePlay_CSS_Reset.css" />
 	<link rel="shortcut icon" type="image/x-icon" href="Img/favicon.ico" />
-	<link rel="stylesheet" type="text/css" href="GooglePlay_CSS_Header.css" />
-	<link rel="stylesheet" type="text/css" href="GooglePlay_CSS_Menu.css" />
-	<link rel="stylesheet" type="text/css" href="GooglePlay_CSS_Section.css" />
+	<link rel="stylesheet" type="text/css" href="GooglePlay_CSS_Header_Mobile.css" />
+	<link rel="stylesheet" type="text/css" href="GooglePlay_CSS_Menu_Mobile.css" />
+	<link rel="stylesheet" type="text/css" href="GooglePlay_CSS_Section_Mobile.css" />
 </head>
 <body>
 	<header>
 	<div id="header_container">
-		<div id="logo">
+		<div id="main_menu">
+			<button><img src="Img/M_Menu.png"></button>
+		</div>
+		<div id ="logo">
 			<a href="https://play.google.com/store">
-				<img src="Img/header_logo.png">
+				<img src="Img/M_logo.png">
 			</a>
 		</div>
 		<div id="search">
-			<form action="">
-				<input value placeholder="  검색" style="font: 16px Arial" />
-				<a><button><span></span></button></a>
-			</form>
-		</div>
-		<div id="header_buttons">
-			<a><span id="google_menu_button"></span></a>
-			<a href="https://accounts.google.com/"><button id="login_button">로그인</button></a>
-		</div>
-		<div id="google_menu">
-			<ul>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-			</ul>
+			<button><img src="Img/M_Search.png"></button>
 		</div>
 	</div>
 	</header>
 	
-	<nav id="side_menu">
-	<div id="side_menu_container">
-		<a id="current_main_menu" href="https://play.google.com/store/books">
-			<div>
-				<img src="Img/lc_icon_book.png">
-				<span>도서</span>
-			</div>
-		</a>
-		<div id="current_menu_detail">
-			<ul>
-				<li><a href="https://accounts.google.com/"><div>내 책</div></a></li>
-				<li><a href="https://play.google.com/store/books"><div>쇼핑하기</div></a></li>
-			</ul>
-		</div>
-		<div id="main_menu_trigger">
-			<img src="Img/lc_icon_arrow.png">
-		</div>
-		<div id="main_menu">
-			<ul>
-				<li>
-					<a href="https://play.google.com/store/apps">
-						<div>
-							<img src="Img/lc_icon_android.png">
-							<span>앱</span>
-						</div>
-					</a>
-				</li>
-				<li>
-					<a href="https://play.google.com/store/movies">
-						<div>
-							<img src="Img/lc_icon_movie.png">
-							<span>영화</span>
-						</div>
-					</a>
-				</li>
-				<li>
-					<a href="https://play.google.com/store/devices">
-						<div>
-							<img src="Img/lc_icon_device.png">
-							<span>기기</span>
-						</div>
-					</a>
-				</li>
-				<li>
-					<a href="https://play.google.com/store">
-						<div>
-							<img src="Img/lc_icon_store.png">
-							<span>스토어</span>
-						</div>
-					</a>
-				</li>
-			</ul>
-		</div>
+	<nav>
+	<div id="nav_container">
+		<ul>
+			<li><a href="https://accounts.google.com/">내 책</a></li>
+			<li><a href="https://play.google.com/store/books/new">신규 출시</a></li>
+			<li><a href="https://play.google.com/store/books/top">인기 </a></li>
+		</ul>
 	</div>
 	</nav>
-	
-	<nav id="bar_menu">
-	<div id="bar_menu_container">
-		<div class="genre">
-			<button>
-				<span>장르</span>
-				<img src="Img/menu_arrow.png">
-			</button>
-		</div>
-		<div id="bar_spacer"></div>
-		<div class="section_menu">
-			<ul>
-				<li><a href="https://play.google.com/store/books"><div>홈</div></a></li>
-				<li><a href="https://play.google.com/store/books/top"><div>인기차트</div></a></li>
-				<li><a href="https://play.google.com/store/books/new"><div>신간</div></a></li>
-			</ul>
-		</div>
-		<div class="genre_container">
-			<ul>
-				<li><a href="https://play.google.com/store/books/category/coll_1214">가족 / 관계</a></li>
-				<li><a href="https://play.google.com/store/books/category/coll_1202">건강 / 웰빙</a></li>
-				<li><a href="https://play.google.com/store/books/category/coll_1205">경영 / 경제</a></li>
-				<li><a href="https://play.google.com/store/books/category/coll_1671">과학 / 수학</a></li>
-				<li><a href="https://play.google.com/store/books/category/coll_1260">만화</a></li>
-				<li><a href="https://play.google.com/store/books/category/coll_1682">소설 / 문화</a></li>
-				<li><a href="https://play.google.com/store/books/category/coll_1611">어린이</a></li>
-				<li><a href="https://play.google.com/store/books/category/coll_1683">여행</a></li>
-				<li><a href="https://play.google.com/store/books/category/coll_1681">역사</a></li>
-				<li><a href="https://play.google.com/store/books/category/coll_1674">예술과 디자인</a></li>
-				<li><a href="https://play.google.com/store/books/category/coll_1676">외국어 / 교재</a></li>
-				<li><a href="https://play.google.com/store/books/category/coll_1208">요리 / 음료</a></li>
-				<li><a href="https://play.google.com/store/books/category/coll_1204">인물 / 자서전</a></li>
-				<li><a href="https://play.google.com/store/books/category/coll_1656">정치 / 사회</a></li>
-				<li><a href="https://play.google.com/store/books/category/coll_1217">종교</a></li>
-				<li><a href="https://play.google.com/store/books/category/coll_1207">컴퓨터 / 기술</a></li>
-			</ul>
-		</div>
-	</div>
-	<div class="bar_rightside">
-			<button id="help" title="도움말"><img src="Img/menu_button_help.png"></button>
-			<button id="setting"><img src="Img/menu_button_setting.png"></button>
-	</div>
-	</nav>
-	
+
 	<section>
 	<div id="section_container">
 		<div class="weekly_best">
@@ -276,39 +167,6 @@
 							<a class="book_title" href="https://play.google.com/store/books/details/%EC%9D%BC%EB%A0%88%EC%9D%B8%EC%A0%9C%EC%9E%84%EC%8A%A4_%EC%9D%B8%EC%83%9D%EC%9D%84_%EB%8B%A8%EC%88%9C%ED%95%98%EA%B2%8C_%EC%82%AC%EB%8A%94_100%EA%B0%80%EC%A7%80_%EB%B0%A9%EB%B2%95?id=lsHcPC7_rX8C">인생을 단순하게 사는 100가지 방법</a><br/>
 							<a class="author" href="">일레인제임스</a>
 							<a class="price" href="">₩9,600</a><br/>
-						</div>
-					</a>
-				</li>
-				<li>
-					<a href="https://play.google.com/store/books/details/%EC%9A%94%ED%95%9C_%EB%B3%BC%ED%94%84%EA%B0%95_%ED%8F%B0_%EA%B4%B4%ED%85%8C_%EC%A0%8A%EC%9D%80_%EB%B2%A0%EB%A5%B4%ED%85%8C%EB%A5%B4%EC%9D%98_%EC%8A%AC%ED%94%94_%ED%95%9C%EA%B8%80%ED%8C%90?id=w5ovsKXL0IQC">
-						<div><img src="Img/1-5.jpg"></div>
-						<div class="book_cover"></div>
-						<div>
-							<a class="book_title" href="https://play.google.com/store/books/details/%EC%9A%94%ED%95%9C_%EB%B3%BC%ED%94%84%EA%B0%95_%ED%8F%B0_%EA%B4%B4%ED%85%8C_%EC%A0%8A%EC%9D%80_%EB%B2%A0%EB%A5%B4%ED%85%8C%EB%A5%B4%EC%9D%98_%EC%8A%AC%ED%94%94_%ED%95%9C%EA%B8%80%ED%8C%90?id=w5ovsKXL0IQC">젊은 베르테르의 슬픔</a><br/>
-							<a class="author" href="">요한 볼프강 폰 괴테</a>
-							<a class="price" href="">₩1,500</a><br/>
-						</div>
-					</a>
-				</li>
-				<li>
-					<a href="https://play.google.com/store/books/details/%EB%8D%B0%EC%9D%BC_%EC%B9%B4%EB%84%A4%EA%B8%B0_%EB%8D%B0%EC%9D%BC_%EC%B9%B4%EB%84%A4%EA%B8%B0%EC%9D%98_%EC%9E%90%EA%B8%B0%EA%B4%80%EB%A6%AC%EB%A1%A0?id=zTgXwcsGQcEC">
-						<div><img src="Img/1-6.jpg"></div>
-						<div class="book_cover"></div>
-						<div>
-							<a class="book_title" href="https://play.google.com/store/books/details/%EB%8D%B0%EC%9D%BC_%EC%B9%B4%EB%84%A4%EA%B8%B0_%EB%8D%B0%EC%9D%BC_%EC%B9%B4%EB%84%A4%EA%B8%B0%EC%9D%98_%EC%9E%90%EA%B8%B0%EA%B4%80%EB%A6%AC%EB%A1%A0?id=zTgXwcsGQcEC">데일 카네기의 자기관리론</a><br/>
-							<a class="author" href="">데일 카네기</a>
-							<a class="price" href="">₩3,000</a><br/>
-						</div>
-					</a>
-				</li>
-				<li>
-					<a href="https://play.google.com/store/books/details/%EC%A1%B0%EC%A0%95%EB%9E%98_%EC%A0%95%EA%B8%80%EB%A7%8C%EB%A6%AC_1?id=9ZXEAwAAQBAJ">
-						<div><img src="Img/1-7.jpg"></div>
-						<div class="book_cover"></div>
-						<div>
-							<a class="book_title" href="https://play.google.com/store/books/details/%EC%A1%B0%EC%A0%95%EB%9E%98_%EC%A0%95%EA%B8%80%EB%A7%8C%EB%A6%AC_1?id=9ZXEAwAAQBAJ">정글만리 1</a><br/>
-							<a class="author" href="">조정래</a>
-							<a class="price" href="">₩8,100</a><br/>
 						</div>
 					</a>
 				</li>
@@ -446,42 +304,9 @@
 						</div>
 					</a>
 				</li>
-				<li>
-					<a href="https://play.google.com/store/books/details/%EC%9D%B4%EB%AC%B8%ED%98%81_%EC%84%B8%ED%8A%B8_%EB%A7%88%ED%98%91_%EC%86%8C%EC%9A%B4%EA%B0%95_%EC%A0%8410%EA%B6%8C_%EC%99%84%EA%B2%B0?id=2f6-AgAAQBAJ">
-						<div><img src="Img/2-5.jpg"></div>
-						<div class="book_cover"></div>
-						<div>
-							<a class="book_title" href="https://play.google.com/store/books/details/%EC%9D%B4%EB%AC%B8%ED%98%81_%EC%84%B8%ED%8A%B8_%EB%A7%88%ED%98%91_%EC%86%8C%EC%9A%B4%EA%B0%95_%EC%A0%8410%EA%B6%8C_%EC%99%84%EA%B2%B0?id=2f6-AgAAQBAJ">[세트] 마협 소운강(전10권/완결)</a><br/>
-							<a class="author" href="">이문혁</a>
-							<a class="price" href="">₩16,200</a><br/>
-						</div>
-					</a>
-				</li>
-				<li>
-					<a href="https://play.google.com/store/books/details/%EB%AC%98%EC%9E%AC_%EC%84%B8%ED%8A%B8_%EC%B2%AD%EC%9A%B4%EC%A0%81%ED%95%98%EA%B2%80_%EC%A0%847%EA%B6%8C_%EC%99%84%EA%B2%B0?id=39fJAgAAQBAJ">
-						<div><img src="Img/2-6.jpg"></div>
-						<div class="book_cover"></div>
-						<div>
-							<a class="book_title" href="https://play.google.com/store/books/details/%EB%AC%98%EC%9E%AC_%EC%84%B8%ED%8A%B8_%EC%B2%AD%EC%9A%B4%EC%A0%81%ED%95%98%EA%B2%80_%EC%A0%847%EA%B6%8C_%EC%99%84%EA%B2%B0?id=39fJAgAAQBAJ">[세트] 청운적하검 (전7권/완결)</a><br/>
-							<a class="author" href="">묘재</a>
-							<a class="price" href="">₩16,800</a><br/>
-						</div>
-					</a>
-				</li>
-				<li>
-					<a href="https://play.google.com/store/books/details/%EA%B7%80%EC%88%98_%EC%84%B8%ED%8A%B8_%EC%84%9C%EB%B0%94%EC%9D%B4%EB%B2%8C_%EC%A0%848%EA%B6%8C_%EC%99%84%EA%B2%B0?id=7bi5AgAAQBAJ">
-						<div><img src="Img/2-7.jpg"></div>
-						<div class="book_cover"></div>
-						<div>
-							<a class="book_title" href="https://play.google.com/store/books/details/%EA%B7%80%EC%88%98_%EC%84%B8%ED%8A%B8_%EC%84%9C%EB%B0%94%EC%9D%B4%EB%B2%8C_%EC%A0%848%EA%B6%8C_%EC%99%84%EA%B2%B0?id=7bi5AgAAQBAJ">[세트] 서바이벌 (전8권/완결)</a><br/>
-							<a class="author" href="">귀수</a>
-							<a class="price" href="">₩17,920</a><br/>
-						</div>
-					</a>
-				</li>
 			</ul>
 			</div>
-		</div>
+	</div>
 	</section>
 
 	<footer>
