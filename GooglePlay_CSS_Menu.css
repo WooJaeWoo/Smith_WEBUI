@@ -119,6 +119,12 @@
 }
 .genre_container {
 	float: left;
+	width: 202px;
+	height: 451px;
+	z-index: 100;
+	background-color: #fff;
+	border: 1px solid #d6d6d6;
+	border-radius: 2px;
 	display: none;
 }
 .section_menu {

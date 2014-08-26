@@ -119,7 +119,7 @@
 				<li><a href="https://play.google.com/store/books/new"><div>신간</div></a></li>
 			</ul>
 		</div>
-		<div class="genre_container">
+		<div class="genre_container" style="display:none;">
 			<ul>
 				<li><a href="https://play.google.com/store/books/category/coll_1214">가족 / 관계</a></li>
 				<li><a href="https://play.google.com/store/books/category/coll_1202">건강 / 웰빙</a></li>
@@ -140,6 +140,28 @@
 			</ul>
 		</div>
 	</div>
+	
+	<script type="text/javascript">
+		window.addEventListener('load', clickGenreMenu, false);
+
+		function clickGenreMenu ()
+		{
+			var genreButton = document.querySelector(".genre");
+			var genreContainer = document.querySelector(".genre_container");
+			document.addEventListener('click', function(e) {
+				if (genreContainer.style.display === "block")
+				{
+					genreContainer.style.display = "none";
+					return;
+				}
+				if (e.target.className === "genre")
+				{
+					genreContainer.style.display = "block";
+				}
+			}, false);
+		}
+	</script>
+
 	<div class="bar_rightside">
 			<button id="help" title="도움말"><img src="Img/menu_button_help.png"></button>
 			<button id="setting"><img src="Img/menu_button_setting.png"></button>
