@@ -43,6 +43,7 @@ button.see_more {
 button.see_more:hover {
 	background-color: #1bb5ff;
 	box-shadow: inset 0 -2px 0 rgba(0,0,0,0.27);
+	cursor: pointer;
 }
 .card_list {
 	clear: both;
