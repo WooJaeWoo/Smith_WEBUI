@@ -104,15 +104,16 @@ function makeBookElement(template, bookList)
 
 window.addEventListener('load', function() {
 	var genreSelector = document.querySelector('.genre_container');
-	genreSelector.addEventListener('click', function(ev) {
-		debugger;
-		var cardList_Fantasy = document.querySelector('#fantasy_sale');
-		cardList_Fantasy.style.display = "none";
-		var cardList_WeeklyBest = document.querySelector('.weekly_best .card_list ul');
-		cardList_WeeklyBest.innerHTML = makeBookElement(sTemplate, aBookList);
-		cardList_WeeklyBest.parentElement.style.overflow = "visible";
-		var cardList_Book = document.querySelectorAll('.weekly_best .card_list ul li');
-		for (var i = 0; i < cardList_Book.length; i++)
+	genreSelector.addEventListener('click', function(e) {
+		var cardListFantasy = document.querySelector('#fantasy_sale');
+		cardListFantasy.style.display = "none";
+		
+		var cardListWeeklyBest = document.querySelector('.weekly_best .card_list ul');
+		cardListWeeklyBest.innerHTML = makeBookElement(sTemplate, aBookList);
+		cardListWeeklyBest.parentElement.style.overflow = "visible";
+		
+		var cardListBook = document.querySelectorAll('.weekly_best .card_list ul li');
+		for (var i = 0; i < cardListBook.length; i++)
 		{
 			cardList_Book[i].style.marginBottom = "20px";
 		}

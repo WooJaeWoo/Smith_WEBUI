@@ -148,6 +148,9 @@
 		{
 			var genreButton = document.querySelector(".genre");
 			var genreContainer = document.querySelector(".genre_container");
+			/*genreButton.addEventListener('click', function(e) {
+				genreContainer.style.display = "block"
+			}, false);*/
 			document.addEventListener('click', function(e) {
 				if (genreContainer.style.display === "block")
 				{
@@ -173,8 +176,8 @@
 	<div id="section_container">
 		<div class="weekly_best">
 			<div class="book_shelves">
-				<button class="see_more">더보기</button>
 				<a href="https://play.google.com/store/books/collection/promotion_1001065_toppaid_bookkr">
+					<button class="see_more">더보기</button>
 					<div>
 					<h1>주간 베스트셀러</h1>
 					<h4>한 주 동안 가장 많은 사랑을 받은 도서</h4>
@@ -341,8 +344,8 @@
 		</div>
 		<div id="fantasy_sale">
 			<div class="book_shelves">
-				<button class="see_more">더보기</button>
 				<a href="https://play.google.com/store/books/collection/promotion_1000ec0_heroism_set_discount">
+				<button class="see_more">더보기</button>
 				<div>
 					<h1>판타지/무협 최고 50% 할인</h1>
 					<h4>모든 도서 1권은 무료로 드려요!</h4>
