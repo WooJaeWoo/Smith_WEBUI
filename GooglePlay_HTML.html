@@ -46,7 +46,6 @@
 		</div>
 	</div>
 	</header>
-	
 	<nav id="side_menu">
 	<div id="side_menu_container">
 		<a id="current_main_menu" href="https://play.google.com/store/books">
@@ -64,36 +63,44 @@
 		<div id="main_menu_trigger">
 			<img src="Img/lc_icon_arrow.png">
 		</div>
-		<div id="main_menu">
+		<div id="main_menu" style="opacity:0; display:none;">
 			<ul>
 				<li>
 					<a href="https://play.google.com/store/apps">
-						<div>
-							<img src="Img/lc_icon_android.png">
+						<div class="menuBackground">
+							<div class="menuIcon">
+								<img src="Img/lc_icon_android.png">
+							</div>
 							<span>앱</span>
 						</div>
 					</a>
 				</li>
 				<li>
 					<a href="https://play.google.com/store/movies">
-						<div>
-							<img src="Img/lc_icon_movie.png">
+						<div class="menuBackground">
+							<div class="menuIcon">
+								<img src="Img/lc_icon_movie.png">
+							</div>
 							<span>영화</span>
 						</div>
 					</a>
 				</li>
 				<li>
 					<a href="https://play.google.com/store/devices">
-						<div>
-							<img src="Img/lc_icon_device.png">
+						<div class="menuBackground">
+							<div class="menuIcon">
+								<img src="Img/lc_icon_device.png">
+							</div>
 							<span>기기</span>
 						</div>
 					</a>
 				</li>
 				<li>
 					<a href="https://play.google.com/store">
-						<div>
-							<img src="Img/lc_icon_store.png">
+						<div class="menuBackground">
+							<div class="menuIcon">
+								<img src="Img/lc_icon_store.png">
+							</div>
 							<span>스토어</span>
 						</div>
 					</a>
@@ -102,14 +109,13 @@
 		</div>
 	</div>
 	</nav>
-	
 	<nav id="bar_menu">
 	<div id="bar_menu_container">
 		<div class="genre">
-			<button>
+			<span>
 				<span>장르</span>
 				<img src="Img/menu_arrow.png">
-			</button>
+			</span>
 		</div>
 		<div id="bar_spacer"></div>
 		<div class="section_menu">
@@ -121,50 +127,25 @@
 		</div>
 		<div class="genre_container" style="display:none;">
 			<ul>
-				<li><div><a>가족 / 관계</a></div></li>
-				<li><div><a>건강 / 웰빙</a></div></li>
-				<li><div><a>경영 / 경제</a></div></li>
-				<li><div><a>과학 / 수학</a></div></li>
-				<li><div><a>만화</a></div></li>
-				<li><div><a>소설 / 문화</a></div></li>
-				<li><div><a>어린이</a></div></li>
-				<li><div><a>여행</a></div></li>
-				<li><div><a>역사</a></div></li>
-				<li><div><a>예술과 디자인</a></div></li>
-				<li><div><a>외국어 / 교재</a></div></li>
-				<li><div><a>요리 / 음료</a></div></li>
-				<li><div><a>인물 / 자서전</a></div></li>
-				<li><div><a>정치 / 사회</a></div></li>
-				<li><div><a>종교</a></div></li>
-				<li><div><a>컴퓨터 / 기술</a></div></li>
+				<li><div><a class="family">가족 / 관계</a></div></li>
+				<li><div><a class="health">건강 / 웰빙</a></div></li>
+				<li><div><a class="management">경영 / 경제</a></div></li>
+				<li><div><a class="science">과학 / 수학</a></div></li>
+				<li><div><a class="comic">만화</a></div></li>
+				<li><div><a class="novel">소설 / 문화</a></div></li>
+				<li><div><a class="kids">어린이</a></div></li>
+				<li><div><a class="travel">여행</a></div></li>
+				<li><div><a class="history">역사</a></div></li>
+				<li><div><a class="art">예술과 디자인</a></div></li>
+				<li><div><a class="language">외국어 / 교재</a></div></li>
+				<li><div><a class="cook">요리 / 음료</a></div></li>
+				<li><div><a class="biography">인물 / 자서전</a></div></li>
+				<li><div><a class="politics">정치 / 사회</a></div></li>
+				<li><div><a class="religion">종교</a></div></li>
+				<li><div><a class="tech">컴퓨터 / 기술</a></div></li>
 			</ul>
 		</div>
 	</div>
-	
-	<script type="text/javascript">
-		window.addEventListener('load', clickGenreMenu, false);
-
-		function clickGenreMenu ()
-		{
-			var genreButton = document.querySelector(".genre");
-			var genreContainer = document.querySelector(".genre_container");
-			/*genreButton.addEventListener('click', function(e) {
-				genreContainer.style.display = "block"
-			}, false);*/
-			document.addEventListener('click', function(e) {
-				if (genreContainer.style.display === "block")
-				{
-					genreContainer.style.display = "none";
-					return;
-				}
-				if (e.target.className === "genre")
-				{
-					genreContainer.style.display = "block";
-				}
-
-			}, false);
-		}
-	</script>
 
 	<div class="bar_rightside">
 			<button id="help" title="도움말"><img src="Img/menu_button_help.png"></button>
@@ -173,11 +154,14 @@
 	</nav>
 	
 	<section>
+	<div id="loading_effect" style="display:none;">
+		<img src="/Img/loading_arrow.gif">
+	</div>
 	<div id="section_container">
 		<div class="weekly_best">
 			<div class="book_shelves">
+				<button class="see_more">더보기</button>
 				<a href="https://play.google.com/store/books/collection/promotion_1001065_toppaid_bookkr">
-					<button class="see_more">더보기</button>
 					<div>
 					<h1>주간 베스트셀러</h1>
 					<h4>한 주 동안 가장 많은 사랑을 받은 도서</h4>
@@ -295,57 +279,13 @@
 						</div>
 					</a>
 				</li>
-				<li>
-					<a href="https://play.google.com/store/books/details/%EC%9D%BC%EB%A0%88%EC%9D%B8%EC%A0%9C%EC%9E%84%EC%8A%A4_%EC%9D%B8%EC%83%9D%EC%9D%84_%EB%8B%A8%EC%88%9C%ED%95%98%EA%B2%8C_%EC%82%AC%EB%8A%94_100%EA%B0%80%EC%A7%80_%EB%B0%A9%EB%B2%95?id=lsHcPC7_rX8C">
-						<div><img src="Img/1-4.jpg"></div>
-						<div class="book_cover"></div>
-						<div>
-							<a class="book_title" href="https://play.google.com/store/books/details/%EC%9D%BC%EB%A0%88%EC%9D%B8%EC%A0%9C%EC%9E%84%EC%8A%A4_%EC%9D%B8%EC%83%9D%EC%9D%84_%EB%8B%A8%EC%88%9C%ED%95%98%EA%B2%8C_%EC%82%AC%EB%8A%94_100%EA%B0%80%EC%A7%80_%EB%B0%A9%EB%B2%95?id=lsHcPC7_rX8C">인생을 단순하게 사는 100가지 방법</a><br/>
-							<a class="author" href="">일레인제임스</a>
-							<a class="price" href="">₩9,600</a><br/>
-						</div>
-					</a>
-				</li>
-				<li>
-					<a href="https://play.google.com/store/books/details/%EC%9A%94%ED%95%9C_%EB%B3%BC%ED%94%84%EA%B0%95_%ED%8F%B0_%EA%B4%B4%ED%85%8C_%EC%A0%8A%EC%9D%80_%EB%B2%A0%EB%A5%B4%ED%85%8C%EB%A5%B4%EC%9D%98_%EC%8A%AC%ED%94%94_%ED%95%9C%EA%B8%80%ED%8C%90?id=w5ovsKXL0IQC">
-						<div><img src="Img/1-5.jpg"></div>
-						<div class="book_cover"></div>
-						<div>
-							<a class="book_title" href="https://play.google.com/store/books/details/%EC%9A%94%ED%95%9C_%EB%B3%BC%ED%94%84%EA%B0%95_%ED%8F%B0_%EA%B4%B4%ED%85%8C_%EC%A0%8A%EC%9D%80_%EB%B2%A0%EB%A5%B4%ED%85%8C%EB%A5%B4%EC%9D%98_%EC%8A%AC%ED%94%94_%ED%95%9C%EA%B8%80%ED%8C%90?id=w5ovsKXL0IQC">젊은 베르테르의 슬픔</a><br/>
-							<a class="author" href="">요한 볼프강 폰 괴테</a>
-							<a class="price" href="">₩1,500</a><br/>
-						</div>
-					</a>
-				</li>
-				<li>
-					<a href="https://play.google.com/store/books/details/%EB%8D%B0%EC%9D%BC_%EC%B9%B4%EB%84%A4%EA%B8%B0_%EB%8D%B0%EC%9D%BC_%EC%B9%B4%EB%84%A4%EA%B8%B0%EC%9D%98_%EC%9E%90%EA%B8%B0%EA%B4%80%EB%A6%AC%EB%A1%A0?id=zTgXwcsGQcEC">
-						<div><img src="Img/1-6.jpg"></div>
-						<div class="book_cover"></div>
-						<div>
-							<a class="book_title" href="https://play.google.com/store/books/details/%EB%8D%B0%EC%9D%BC_%EC%B9%B4%EB%84%A4%EA%B8%B0_%EB%8D%B0%EC%9D%BC_%EC%B9%B4%EB%84%A4%EA%B8%B0%EC%9D%98_%EC%9E%90%EA%B8%B0%EA%B4%80%EB%A6%AC%EB%A1%A0?id=zTgXwcsGQcEC">데일 카네기의 자기관리론</a><br/>
-							<a class="author" href="">데일 카네기</a>
-							<a class="price" href="">₩3,000</a><br/>
-						</div>
-					</a>
-				</li>
-				<li>
-					<a href="https://play.google.com/store/books/details/%EC%A1%B0%EC%A0%95%EB%9E%98_%EC%A0%95%EA%B8%80%EB%A7%8C%EB%A6%AC_1?id=9ZXEAwAAQBAJ">
-						<div><img src="Img/1-7.jpg"></div>
-						<div class="book_cover"></div>
-						<div>
-							<a class="book_title" href="https://play.google.com/store/books/details/%EC%A1%B0%EC%A0%95%EB%9E%98_%EC%A0%95%EA%B8%80%EB%A7%8C%EB%A6%AC_1?id=9ZXEAwAAQBAJ">정글만리 1</a><br/>
-							<a class="author" href="">조정래</a>
-							<a class="price" href="">₩8,100</a><br/>
-						</div>
-					</a>
-				</li>
 			</ul>
 			</div>
 		</div>
 		<div id="fantasy_sale">
 			<div class="book_shelves">
-				<a href="https://play.google.com/store/books/collection/promotion_1000ec0_heroism_set_discount">
 				<button class="see_more">더보기</button>
+				<a href="https://play.google.com/store/books/collection/promotion_1000ec0_heroism_set_discount">
 				<div>
 					<h1>판타지/무협 최고 50% 할인</h1>
 					<h4>모든 도서 1권은 무료로 드려요!</h4>
@@ -463,55 +403,15 @@
 						</div>
 					</a>
 				</li>
-				<li>
-					<a href="https://play.google.com/store/books/details/%EA%B8%80%EC%9E%91%EC%86%8C_%EC%84%B8%ED%8A%B8_%EA%B2%80%EB%A7%88_%EC%A0%8410%EA%B6%8C_%EC%99%84%EA%B2%B0?id=4Hy7AgAAQBAJ">
-						<div><img src="Img/2-4.jpg"></div>
-						<div class="book_cover"></div>
-						<div>
-							<a class="book_title" href="https://play.google.com/store/books/details/%EA%B8%80%EC%9E%91%EC%86%8C_%EC%84%B8%ED%8A%B8_%EA%B2%80%EB%A7%88_%EC%A0%8410%EA%B6%8C_%EC%99%84%EA%B2%B0?id=4Hy7AgAAQBAJ">[세트] 검마(전10권/완결)</a><br/>
-							<a class="author" href="">글작소</a>
-							<a class="price" href="">₩17,280</a><br/>
-						</div>
-					</a>
-				</li>
-				<li>
-					<a href="https://play.google.com/store/books/details/%EC%9D%B4%EB%AC%B8%ED%98%81_%EC%84%B8%ED%8A%B8_%EB%A7%88%ED%98%91_%EC%86%8C%EC%9A%B4%EA%B0%95_%EC%A0%8410%EA%B6%8C_%EC%99%84%EA%B2%B0?id=2f6-AgAAQBAJ">
-						<div><img src="Img/2-5.jpg"></div>
-						<div class="book_cover"></div>
-						<div>
-							<a class="book_title" href="https://play.google.com/store/books/details/%EC%9D%B4%EB%AC%B8%ED%98%81_%EC%84%B8%ED%8A%B8_%EB%A7%88%ED%98%91_%EC%86%8C%EC%9A%B4%EA%B0%95_%EC%A0%8410%EA%B6%8C_%EC%99%84%EA%B2%B0?id=2f6-AgAAQBAJ">[세트] 마협 소운강(전10권/완결)</a><br/>
-							<a class="author" href="">이문혁</a>
-							<a class="price" href="">₩16,200</a><br/>
-						</div>
-					</a>
-				</li>
-				<li>
-					<a href="https://play.google.com/store/books/details/%EB%AC%98%EC%9E%AC_%EC%84%B8%ED%8A%B8_%EC%B2%AD%EC%9A%B4%EC%A0%81%ED%95%98%EA%B2%80_%EC%A0%847%EA%B6%8C_%EC%99%84%EA%B2%B0?id=39fJAgAAQBAJ">
-						<div><img src="Img/2-6.jpg"></div>
-						<div class="book_cover"></div>
-						<div>
-							<a class="book_title" href="https://play.google.com/store/books/details/%EB%AC%98%EC%9E%AC_%EC%84%B8%ED%8A%B8_%EC%B2%AD%EC%9A%B4%EC%A0%81%ED%95%98%EA%B2%80_%EC%A0%847%EA%B6%8C_%EC%99%84%EA%B2%B0?id=39fJAgAAQBAJ">[세트] 청운적하검 (전7권/완결)</a><br/>
-							<a class="author" href="">묘재</a>
-							<a class="price" href="">₩16,800</a><br/>
-						</div>
-					</a>
-				</li>
-				<li>
-					<a href="https://play.google.com/store/books/details/%EA%B7%80%EC%88%98_%EC%84%B8%ED%8A%B8_%EC%84%9C%EB%B0%94%EC%9D%B4%EB%B2%8C_%EC%A0%848%EA%B6%8C_%EC%99%84%EA%B2%B0?id=7bi5AgAAQBAJ">
-						<div><img src="Img/2-7.jpg"></div>
-						<div class="book_cover"></div>
-						<div>
-							<a class="book_title" href="https://play.google.com/store/books/details/%EA%B7%80%EC%88%98_%EC%84%B8%ED%8A%B8_%EC%84%9C%EB%B0%94%EC%9D%B4%EB%B2%8C_%EC%A0%848%EA%B6%8C_%EC%99%84%EA%B2%B0?id=7bi5AgAAQBAJ">[세트] 서바이벌 (전8권/완결)</a><br/>
-							<a class="author" href="">귀수</a>
-							<a class="price" href="">₩17,920</a><br/>
-						</div>
-					</a>
-				</li>
 			</ul>
 			</div>
 		</div>
 	</section>
+
+	<script type="text/javascript" src="GooglePlay_JS_GenreMenu.js"></script>
+	<script type="text/javascript" src="GooglePlay_JS_MainMenu.js"></script>
 	<script type="text/javascript" src="GooglePlay_JS_Card_Replace.js"></script>
+	
 	<footer>
 	<div id="footer_container">
 		<div>

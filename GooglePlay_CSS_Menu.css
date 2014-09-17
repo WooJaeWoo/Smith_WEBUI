@@ -5,7 +5,6 @@
 	height: 240px;
 	background-color: #f3f3f3;
 	box-shadow: 0px 1px 6px rgba(0,0,0,0.1); 
-	opacity: 0.4px;
 	z-index: 200;
 }
 #current_main_menu div{
@@ -27,9 +26,52 @@
 	font-weight: 300;
 	font-size: 18px;
 }
+
 #main_menu {
+	position: absolute;
+	top: 48px;
+	width: 200px;
+	height: 192px;
+	background-color: #F3F3F3;
 	display: none;
+	opacity: 0;
+	z-index: 210;
 }
+div.menuBackground {
+	height: 48px;
+}
+
+div.menuIcon {
+	float: left;
+	width: 65px;
+	height: 48px;
+}
+
+#main_menu ul li:nth-child(1) div.menuIcon {
+	background-color: #B3C833;
+}
+#main_menu ul li:nth-child(2) div.menuIcon {
+	background-color: #CE5043;
+}
+#main_menu ul li:nth-child(3) div.menuIcon {
+	background-color: #658092;
+}
+#main_menu ul li:nth-child(4) div.menuIcon {
+	background-color: #444444;
+}
+div.menuIcon img {
+	margin: 12px 28px 0 28px;
+	line-height: 48px;
+}
+div.menuBackground span {
+	float: left;
+	color: #333;
+	margin-left: 8px;
+	line-height: 48px;
+	font-size: 18px;
+	font-weight: 300;
+}
+
 #current_menu_detail ul {
 	position: absolute;
 	top: 48px;
@@ -38,13 +80,16 @@
 	width: 176px;
 	height: 72px;
 }
+
 #current_menu_detail li {
 	width: 176px;
 	height: 36px;
 }
+
 #current_menu_detail li:hover {
 	background-color: #e5e5e5;
 }
+
 #current_menu_detail a {
 	font-size: 18px;
 	line-height: 20px;
@@ -97,17 +142,18 @@
 .genre:hover {
 	background-color: #e5e5e5;
 }
-.genre button {
-	float: left;
-	border: none;
-	background-color: transparent;
-	margin-top: 14px;
+
+.genre > span {
+	line-height: 48px;
+	padding: 16px 16px 15px 16px;
 }
-.genre span {
+
+.genre > span > span {
 	font-size: 14px;
 	color: #909090;
-	padding: 0 5px 0 9px;
+	margin-top: 2px;
 }
+
 .genre_container {
 	position: absolute;
 	top: 42px;
