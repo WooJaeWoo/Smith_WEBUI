@@ -29,31 +29,29 @@ function makeBookElement(template, bookList)
 	return result;
 }
 
-window.addEventListener('load', function() {
-	document.querySelector('.see_more').addEventListener('click', function(e) {
-		document.querySelector('#fantasy_sale').style.display = "none";
+document.querySelector('.see_more').addEventListener('click', function(e) {
+	document.querySelector('#fantasy_sale').style.display = "none";
 
-		var url = "http://localhost:8000/Booklist.json";
-		var request = new XMLHttpRequest();
-		request.open("GET", url, true);
-		request.send(null);
-		request.onreadystatechange = function()
+	var url = "http://localhost:8000/Booklist.json";
+	var request = new XMLHttpRequest();
+	request.open("GET", url, true);
+	request.send(null);
+	request.onreadystatechange = function()
+	{
+		if (request.readyState === 4 && request.status === 200)
 		{
-			if (request.readyState === 4 && request.status === 200)
-			{
-				var bookData = request.responseText;
-				bookData = JSON.parse(bookData);
-				var cardList = document.querySelector('.weekly_best .card_list ul');
-				var newBookList = bookData["weeklyMore"];
-				cardList.innerHTML += makeBookElement(sTemplate, newBookList);
-				cardList.parentElement.style.overflow = "visible";
-			}
-		};
-		
-		//Scoroll Function
-		//window.scrollTo(0,document.body.scrollHeight);
-		scrollDown();
-	}, false)
+			var bookData = request.responseText;
+			bookData = JSON.parse(bookData);
+			var cardList = document.querySelector('.weekly_best .card_list ul');
+			var newBookList = bookData["weeklyMore"];
+			cardList.innerHTML += makeBookElement(sTemplate, newBookList);
+			cardList.parentElement.style.overflow = "visible";
+		}
+	};
+	
+	//Scoroll Function
+	//window.scrollTo(0,document.body.scrollHeight);
+	scrollDown();
 }, false)
 
 function scrollDown() {
