@@ -1,0 +1,25 @@
+body {
+	background-color: darkgray;
+}
+#wrap {
+	border: 3px solid gray;
+	height: 2000px;
+}
+
+#a {
+	float: left;
+	background-color: blue;
+	border: 1px solid red;
+	width: 70%;
+	height: 100%;
+	margin-left: 4%;
+}
+
+#b {
+	float: right;
+	background-color: brown;
+	border: 1px solid red;
+	width: 20%;
+	height: 100%;
+	margin-right: 4%;
+}

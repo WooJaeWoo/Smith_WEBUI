@@ -1,0 +1,58 @@
+div {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+}
+
+#a{
+	background-color: gold;
+	top: 10px;
+	left: 10px;
+	z-index: 100;
+}
+
+#b{
+	background-color: blue;
+	top: 30px;
+	left: 30px;
+	z-index: 200;
+}
+
+#c{
+	background-color: red;
+	top: 50px;
+	left: 50px;
+	z-index: 50;
+}
+
+#d {
+	width: 300px;
+	height: 200px;
+	top: 200px;
+	left: 30px;
+	background-color: blue;
+	z-index: 1;
+}
+
+#e {
+	top: 90px;
+	left: 80px;
+	background-color: red;
+	z-index: 3;
+}
+
+#f {
+	top: 140px;
+	left: 80px;
+	background-color: yellow;
+	z-index: 4;
+}
+
+#g {
+	width: 300px;
+	height: 200px;
+	top: 200px;
+	left: 150px;
+	background-color: gray;
+	z-index: 2;
+}

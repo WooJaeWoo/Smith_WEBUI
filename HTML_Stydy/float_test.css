@@ -1,0 +1,18 @@
+#a {
+	width: 100px;
+	height: 100px;
+	background-color: red;
+	float: left;
+}
+#b {
+	width: 100px;
+	height: 100px;
+	background-color: black;
+	float: right;
+}
+#c {
+	width: 100px;
+	height: 100px;
+	background-color: gray;
+	float: left;
+}
